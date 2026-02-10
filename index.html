@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Central Operacional – Caio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #000000;
+    }
+
+    header {
+      padding: 28px;
+      text-align: center;
+      background: linear-gradient(135deg, #4b0082, #7b2cbf);
+      color: #ffffff;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.9rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      opacity: 0.95;
+      font-size: 0.95rem;
+    }
+
+    main {
+      padding: 28px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      border: 1px solid #e5e5e5;
+      border-radius: 18px;
+      padding: 22px;
+      background: #ffffff;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 24px rgba(123, 44, 191, 0.25);
+    }
+
+    .category {
+      font-size: 0.75rem;
+      font-weight: bold;
+      color: #7b2cbf;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 1.15rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 0.9rem;
+      color: #444444;
+      line-height: 1.4;
+      margin-bottom: 14px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .actions a {
+      flex: 1;
+      text-align: center;
+      padding: 8px 10px;
+      font-size: 0.8rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      background: #7b2cbf;
+      color: #ffffff;
+      transition: background 0.2s;
+    }
+
+    .actions a.secondary {
+      background: #000000;
+    }
+
+    .actions a:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px;
+      font-size: 0.8rem;
+      color: #666666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Central Operacional – Caio</h1>
+    <p>Guia prático de apoio à operação · Grupo Boticário</p>
+  </header>
+
+  <main>
+
+    <div class="card">
+      <div>
+        <div class="category">Entrega</div>
+        <div class="title">Acareação – Não reconhece a entrega</div>
+        <div class="description">
+          Cliente não reconhece o recebimento do pedido. Verificar nome de quem recebeu e data no sistema antes de abrir a acareação.
+        </div>
+      </div>
+      <div class="actions">
+        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000wzOuIAI/view" target="_blank">OMS</a>
+        <a class="secondary" href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x50RIAQ/view" target="_blank">CD</a>
+        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x50bIAA/view" target="_blank">OMS Ruptura</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="category">Entrega</div>
+        <div class="title">Extravio / Roubo</div>
+        <div class="description">
+          Pedido com status de sinistro ou extravio confirmado. Cancelamento ocorre automaticamente, sem possibilidade de reenvio.
+        </div>
+      </div>
+      <div class="actions">
+        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x2p2IAA/view" target="_blank">Ver artigo</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="category">Entrega</div>
+        <div class="title">Atraso na Entrega</div>
+        <div class="description">
+          Pedido ultrapassou a data prometida +1 dia. Necessário abrir chamado junto à transportadora para acompanhamento.
+        </div>
+      </div>
+      <div class="actions">
+        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000wzPEIAY/view" target="_blank">OMS</a>
+        <a class="secondary" href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x50gIAA/view" target="_blank">CD</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="category">Cancelamento</div>
+        <div class="title">Cancelamento – Diversos Fatores</div>
+        <div class="description">
+          Situações diversas que podem gerar cancelamento de pedido, incluindo falhas operacionais e logísticas.
+        </div>
+      </div>
+      <div class="actions">
+        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x4O3IAI/view" target="_blank">Ver artigo</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="category">Ruptura</div>
+        <div class="title">Ruptura – Falta de Estoque</div>
+        <div class="description">
+          Pedido cancelado por indisponibilidade de estoque, tanto em loja quanto em CD.
+        </div>
+      </div>
+      <div class="actions">
+        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x0cTIAQ/view" target="_blank">Ver artigo</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div>
+        <div class="category">Brinde</div>
+        <div class="title">Brinde – Agendamento Incorreto</div>
+        <div class="description">
+          Cliente selecionou localidade errada para retirada do brinde. Aguardar expiração para novo agendamento.
+        </div>
+      </div>
+      <div class="actions">
+        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x4efIAA/view" target="_blank">Ver artigo</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 · Central Operacional – Caio · Apoio Operacional
+  </footer>
+
+</body>
+</html>
