@@ -44,8 +44,6 @@
       background: #ffffff;
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
       transition: transform 0.2s, box-shadow 0.2s;
-      text-decoration: none;
-      color: inherit;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -77,27 +75,17 @@
       margin-bottom: 14px;
     }
 
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
     .actions a {
-      flex: 1;
+      display: block;
       text-align: center;
-      padding: 8px 10px;
-      font-size: 0.8rem;
-      border-radius: 10px;
+      padding: 10px;
+      font-size: 0.85rem;
+      border-radius: 12px;
       text-decoration: none;
       font-weight: bold;
       background: #7b2cbf;
       color: #ffffff;
-      transition: background 0.2s;
-    }
-
-    .actions a.secondary {
-      background: #000000;
+      transition: opacity 0.2s;
     }
 
     .actions a:hover {
@@ -121,84 +109,107 @@
 
   <main>
 
+    <div style="grid-column: 1 / -1; background:#7b2cbf; color:#ffffff; padding:18px; border-radius:14px; font-size:0.95rem; font-weight:500; box-shadow:0 6px 18px rgba(0,0,0,0.2);">
+      ⚠ <strong>ATENÇÃO OPERACIONAL:</strong><br>
+      Lembre-se de verificar o histórico do consumidor para confirmar se não há tratativa em aberto e atente-se ao prazo de retorno que deve ser enviado ao consumidor.
+    </div>
+
     <div class="card">
-      <div>
-        <div class="category">Entrega</div>
-        <div class="title">Acareação – Não reconhece a entrega</div>
-        <div class="description">
-          Cliente não reconhece o recebimento do pedido. Verificar nome de quem recebeu e data no sistema antes de abrir a acareação.
-        </div>
+      <div class="category">Acareação</div>
+      <div class="title">Acareação – OMS</div>
+      <div class="description">
+        <strong>Abrir chamado de acareação</strong> quando o pedido constar como <strong>entregue</strong> no sistema e o consumidor informar que <strong>não recebeu</strong> o produto. Sempre validar histórico, nome de recebedor e data da entrega antes da abertura.
       </div>
       <div class="actions">
-        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000wzOuIAI/view" target="_blank">OMS</a>
-        <a class="secondary" href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x50RIAQ/view" target="_blank">CD</a>
-        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x50bIAA/view" target="_blank">OMS Ruptura</a>
+        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000wzOuIAI/view" target="_blank">Abrir artigo</a>
       </div>
     </div>
 
     <div class="card">
-      <div>
-        <div class="category">Entrega</div>
-        <div class="title">Extravio / Roubo</div>
-        <div class="description">
-          Pedido com status de sinistro ou extravio confirmado. Cancelamento ocorre automaticamente, sem possibilidade de reenvio.
-        </div>
+      <div class="category">Acareação</div>
+      <div class="title">Acareação – CD</div>
+      <div class="description">
+        <strong>Abrir chamado de acareação</strong> quando o pedido constar como entregue e houver divergência relacionada ao <strong>Centro de Distribuição</strong>, principalmente quando o consumidor informar não recebimento.
       </div>
       <div class="actions">
-        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x2p2IAA/view" target="_blank">Ver artigo</a>
+        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x50RIAQ/view" target="_blank">Abrir artigo</a>
       </div>
     </div>
 
     <div class="card">
-      <div>
-        <div class="category">Entrega</div>
-        <div class="title">Atraso na Entrega</div>
-        <div class="description">
-          Pedido ultrapassou a data prometida +1 dia. Necessário abrir chamado junto à transportadora para acompanhamento.
-        </div>
+      <div class="category">Acareação</div>
+      <div class="title">Acareação – OMS Ruptura</div>
+      <div class="description">
+        <strong>Abrir chamado de acareação</strong> quando constar como entregue no OMS, houver indicação de ruptura e o consumidor informar que não recebeu o item.
       </div>
       <div class="actions">
-        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000wzPEIAY/view" target="_blank">OMS</a>
-        <a class="secondary" href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x50gIAA/view" target="_blank">CD</a>
+        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x50bIAA/view" target="_blank">Abrir artigo</a>
       </div>
     </div>
 
     <div class="card">
-      <div>
-        <div class="category">Cancelamento</div>
-        <div class="title">Cancelamento – Diversos Fatores</div>
-        <div class="description">
-          Situações diversas que podem gerar cancelamento de pedido, incluindo falhas operacionais e logísticas.
-        </div>
+      <div class="category">Entrega</div>
+      <div class="title">Extravio / Roubo</div>
+      <div class="description">
+        Utilizar quando o pedido constar como <strong>extraviado, roubado ou sinistrado</strong>. Seguir fluxo de cancelamento conforme política vigente.
       </div>
       <div class="actions">
-        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x4O3IAI/view" target="_blank">Ver artigo</a>
+        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x2p2IAA/view" target="_blank">Abrir artigo</a>
       </div>
     </div>
 
     <div class="card">
-      <div>
-        <div class="category">Ruptura</div>
-        <div class="title">Ruptura – Falta de Estoque</div>
-        <div class="description">
-          Pedido cancelado por indisponibilidade de estoque, tanto em loja quanto em CD.
-        </div>
+      <div class="category">Cancelamento</div>
+      <div class="title">Cancelamento – Diversos Motivos</div>
+      <div class="description">
+        Utilizar para <strong>cancelamento por diversos motivos</strong>, como solicitação do consumidor, divergência operacional, inconsistência no pedido ou impossibilidade de entrega.
       </div>
       <div class="actions">
-        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x0cTIAQ/view" target="_blank">Ver artigo</a>
+        <a href="#" target="_blank">Abrir artigo</a>
       </div>
     </div>
 
     <div class="card">
-      <div>
-        <div class="category">Brinde</div>
-        <div class="title">Brinde – Agendamento Incorreto</div>
-        <div class="description">
-          Cliente selecionou localidade errada para retirada do brinde. Aguardar expiração para novo agendamento.
-        </div>
+      <div class="category">Ações de Fluxo</div>
+      <div class="title">Ações de Fluxo Operacional</div>
+      <div class="description">
+        Aplicar quando for necessário seguir fluxo interno específico para tratativas operacionais, alinhamentos sistêmicos ou direcionamento correto do atendimento.
       </div>
       <div class="actions">
-        <a href="https://grupoboticario.lightning.force.com/lightning/r/Knowledge__kav/ka0Ki000000x4efIAA/view" target="_blank">Ver artigo</a>
+        <a href="#" target="_blank">Abrir artigo</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="category">Ruptura</div>
+      <div class="title">Ruptura – Falta de Estoque</div>
+      <div class="description">
+        Utilizar quando o pedido for impactado por indisponibilidade de produto, exigindo cancelamento ou ajuste conforme política vigente.
+      </div>
+      <div class="actions">
+        <a href="#" target="_blank">Abrir artigo</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="category">Atrasos</div>
+      <div class="title">Atraso – OMS</div>
+      <div class="description">
+        Utilizar quando o <strong>pedido estiver atrasado e já tiver passado da data acordada para entrega</strong> dentro do fluxo OMS. Validar histórico e prazo antes da tratativa.
+      </div>
+      <div class="actions">
+        <a href="#" target="_blank">Abrir artigo</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="category">Atrasos</div>
+      <div class="title">Atraso – CD</div>
+      <div class="description">
+        Utilizar quando o <strong>pedido estiver atrasado e já tiver passado da data acordada para entrega</strong> e o impacto estiver relacionado ao Centro de Distribuição.
+      </div>
+      <div class="actions">
+        <a href="#" target="_blank">Abrir artigo</a>
       </div>
     </div>
 
